@@ -6,12 +6,10 @@ public function denda($anggota_id)
     DATEDIFF(tanggal_kembali, tanggal_batas_kembali)* 1000, 0) as denda from peminjaman inner join user
     on user.id = peminjaman.anggota_id where denda > 0 && peminjaman.anggota_id =".$anggota_id);
     $totaldenda = 0;
-    //dd($denda);
     foreach($denda as $tambahdenda)
     {
         $totaldenda = $totaldenda + $tambahdenda->denda;
     }
-
 
     return view('denda',compact('denda','totaldenda'));
 }
