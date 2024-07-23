@@ -1,15 +1,3 @@
-
-delete from peminjaman;
-delete from buku;
-delete from kategori;
-delete from user;
-
-ALTER TABLE peminjaman AUTO_INCREMENT = 1;
-ALTER TABLE buku AUTO_INCREMENT = 1;
-ALTER TABLE kategori AUTO_INCREMENT = 1;
-ALTER TABLE user AUTO_INCREMENT = 1;
-
-
 INSERT INTO user (nama, alamat, no_ktp, no_hp, email) VALUES
 	("user 1","tangerang","0001","0801","anita@email.com"),
 	("user 2","tangerang","0002","0802","bayu@email.com"),
